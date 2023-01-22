@@ -8,8 +8,8 @@ namespace filmesalkalmazas
 {
     internal class Film
     {
-        private string cim;
-        private int korhatar;
+        protected string cim;
+        protected int korhatar;
 
         public Film(string cim, int korhatar)
         {
@@ -19,7 +19,7 @@ namespace filmesalkalmazas
         protected string Cim { get => cim; set => cim = value; }
         protected int Korhatar { get => korhatar; set => korhatar = value; }
 
-        protected bool IsAjanlott(int vizsgaltKorhatar)
+        public bool IsAjanlott(int vizsgaltKorhatar)
         {
             if (vizsgaltKorhatar > korhatar)
             {
@@ -28,14 +28,19 @@ namespace filmesalkalmazas
             return false;
         }
 
-        protected string getCim()
+        public string getCim()
         {
             return cim;
         }
 
-        protected int GetKorhatar() 
+        public int GetKorhatar() 
         { 
             return korhatar;
+        }
+
+        public override string ToString()
+        {
+            return $"{cim} - korhatar: {korhatar}";
         }
 
 

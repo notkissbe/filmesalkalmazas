@@ -13,5 +13,9 @@ namespace filmesalkalmazas
         {
             this.szalaghossz = szalaghossz;
         }
+        public override string ToString()
+        {
+            return $"{cim} - korhatar: {korhatar} - hossz: {szalaghossz}";
+        }
     }
 }

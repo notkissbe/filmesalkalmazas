@@ -8,9 +8,17 @@ namespace filmesalkalmazas
 {
     internal class DVD : Film
     {
-        private enum; 
-        public DVD(string cim, int korhatar) : base(cim, korhatar)
+        private List<string> nyelvek = new List<string>();
+
+        public DVD(string cim, int korhatar, List<string> nyelvek) : base(cim, korhatar)
         {
+            this.nyelvek = nyelvek;
+        }
+
+        public override string ToString()
+        {
+            string nyelvout = nyelvek.ToString();
+            return $"{cim} - korhatar: {korhatar} - nyelvek: {nyelvout}";
         }
     }
 }

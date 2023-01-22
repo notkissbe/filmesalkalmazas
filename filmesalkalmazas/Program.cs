@@ -10,6 +10,10 @@ namespace filmesalkalmazas
     {
         static void Main(string[] args)
         {
+            Film f1 = new Film("majom",12);
+
+            Console.WriteLine(f1);
+            Console.ReadLine();
         }
     }
 }
